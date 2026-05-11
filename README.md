@@ -53,5 +53,20 @@ Execute the Spark job. The script handles multi-threading and interacts with Atl
 chmod +x run.sh
 ./run.sh
 
+---
 
+## 📊 Usage Demo: Before & After
 
+This section demonstrates the tool's capability to discover and tag PII metadata automatically. We scan an Iceberg table, and the result is synchronized to Apache Atlas.
+
+<br>
+
+| **1. Before: An Untagged Iceberg Entity in Atlas** | **2. After: Running the PII Scanner** |
+| :---: | :---: |
+| [Click for Larger View] | [Click for Larger View] |
+| ![](images/atlas_before.png) | ![](images/atlas_after.png) |
+| **Description:** This screenshot shows an Iceberg table details in Apache Atlas *before* running the scanner. Note that the **Classifications** list is empty, and individual string columns are not marked as PII. | **Description:** The same entity details details page *after* a successful scan. A **"PII"** classification has been automatically applied to the table level, and affected string columns now possess the same PII tag. |
+
+> **Note:** The "after" screenshot clearly demonstrates successful metadata synchronization and policy enforcement.
+
+---
