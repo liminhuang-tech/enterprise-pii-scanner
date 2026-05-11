@@ -1,0 +1,19 @@
+{
+  "atlas_config": {
+    "url": "https://altas:31443/api/atlas/v2",
+    "auth_type": "KERBEROS",
+    "database_name": "your_db"
+  },
+  "scan_config": {
+    "sample_rows": 1000,
+    "max_parallel_tables": 5
+  },
+  "custom_patterns": [
+    {
+      "entity": "NATIONAL_ID",
+      "name": "nid",
+      "regex": "[A-Z]{3}\\d{6}",
+      "score": 0.95
+    }
+  ]
+}
