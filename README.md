@@ -38,7 +38,7 @@ Step 1: Initialize the Environment
 Run the setup script to build the local venv and the executor package. This only needs to be run once or when dependencies change.
 This project uses a Self-Contained Environment strategy. You do not need to install libraries globally on your cluster nodes.
 Run the setup script to build the local virtual environment (driver_env/) and package the executor dependencies (executor_env.zip).
- Note: The script will use /usr/bin/python3.8 by default. Please ensure Python 3.8 is installed on your edge node.
+Note: The script will use /usr/bin/python3.8 by default. Please ensure Python 3.8 is installed on your edge node.
 chmod +x setup_env.sh
 ./setup_env.sh
 
