@@ -2,7 +2,7 @@
 
 This solution automates PII discovery using NLP and synchronizes metadata tags to Apache Atlas. This solution is optimized for multi-version Python environments and distributed Spark execution.
 
-📂 Project Structure (/root/lily/)
+📂 Project Structure 
 
 * `driver_env/` - Local virtual environment for the Driver node(Python 3.8).
 * `enterprise_pii_scan.py` - Core PySpark logic for PII detection and Atlas tagging.
