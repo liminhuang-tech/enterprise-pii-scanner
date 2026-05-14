@@ -18,7 +18,6 @@ This solution automates PII discovery using NLP and synchronizes metadata tags t
 🧊 Iceberg Runtime Jar
 The scanner requires the Iceberg-Spark runtime library to interact with Iceberg tables. This is provided via the ICEBERG_JAR in run.sh:
 ICEBERG_JAR="/opt/cloudera/parcels/SPARK3-3.3.2.3.3.7190.0-91-1.p0.45265883/lib/spark3/iceberg/iceberg-spark-runtime-3.3_2.12-1.3.0.3.3.7190.0-91.jar"
-
 Note: This path is specific to the current Cloudera Parcel version. If the cluster is upgraded, verify the new path in /opt/cloudera/parcels/SPARK3/lib/spark3/iceberg/.
 
 🐍 Python Version Management
@@ -26,8 +25,7 @@ Version:This project requires **Python 3.8**. In environments with multiple Pyth
 Key Dependencies: pandas, pyarrow, spacy (3.7.5), presidio-analyzer, and requests-kerberos.
 PyArrow: Required for Spark-Pandas (Arrow) optimization (spark.sql.execution.arrow.pyspark.enabled).
 
-🏆pii_rules.json
-Centralized Configuration: All operational parameters, including Atlas URLs and PII detection thresholds, are managed via pii_rules.json. This allows for zero-code changes when moving across environments.
+🏆Centralized Configuration: All operational parameters, including Atlas URLs and PII detection thresholds, are managed via pii_rules.json. This allows for zero-code changes when moving across environments.
 Before running the environment setup, create your local configuration file from the provided template:
 cp pii_rules_example.json pii_rules.json
 Edit pii_rules.json to include your specific Atlas URL, Kerberos credentials, and custom PII regex patterns.
