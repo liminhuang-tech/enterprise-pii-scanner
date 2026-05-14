@@ -21,7 +21,7 @@ ICEBERG_JAR="/opt/cloudera/parcels/SPARK3-3.3.2.3.3.7190.0-91-1.p0.45265883/lib/
 Note: This path is specific to the current Cloudera Parcel version. If the cluster is upgraded, verify the new path in /opt/cloudera/parcels/SPARK3/lib/spark3/iceberg/.
 
 🐍 Python Version Management
-Version:This project requires **Python 3.8**. In environments with multiple Python versions installed, the scripts are configured to explicitly call `/usr/bin/python3.8` to ensure compatibility with Spark 3.3.
+Version:This project runs in **Python 3.8**. And the environment has multiple Python versions installed, the scripts are configured to explicitly call `/usr/bin/python3.8` to ensure compatibility with Spark 3.3.
 Key Dependencies: pandas, pyarrow, spacy (3.7.5), presidio-analyzer, and requests-kerberos.
 PyArrow: Required for Spark-Pandas (Arrow) optimization (spark.sql.execution.arrow.pyspark.enabled).
 
@@ -37,8 +37,8 @@ Run the setup script to build the local venv and the executor package. This only
 This project uses a Self-Contained Environment strategy. You do not need to install libraries globally on your cluster nodes.
 Run the setup script to build the local virtual environment (driver_env/) and package the executor dependencies (executor_env.zip).
 Note: The script will use /usr/bin/python3.8 by default. Please ensure Python 3.8 is installed on your edge node.
-chmod +x setup_env.sh
-./setup_env.sh
+#chmod +x setup_env.sh
+#./setup_env.sh
 
 Step 2: Kerberos Authentication
 Ensure you have an active ticket before starting the scan
@@ -48,8 +48,8 @@ The systest user must have Entity Read and Entity Update permissions in the Rang
 Step 3: Run the scanner
 Navigate to the project directory and execute the wrapper script.
 Execute the Spark job. The script handles multi-threading and interacts with Atlas.
-chmod +x run.sh
-./run.sh
+#chmod +x run.sh
+#./run.sh
 
 ---
 
