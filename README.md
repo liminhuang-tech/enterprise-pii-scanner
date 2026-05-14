@@ -37,6 +37,7 @@ Run the setup script to build the local venv and the executor package. This only
 This project uses a Self-Contained Environment strategy. You do not need to install libraries globally on your cluster nodes.
 Run the setup script to build the local virtual environment (driver_env/) and package the executor dependencies (executor_env.zip).
 Note: The script will use /usr/bin/python3.8 by default. Please ensure Python 3.8 is installed on your edge node.
+
 #chmod +x setup_env.sh
 #./setup_env.sh
 
@@ -48,6 +49,7 @@ The systest user must have Entity Read and Entity Update permissions in the Rang
 Step 3: Run the scanner
 Navigate to the project directory and execute the wrapper script.
 Execute the Spark job. The script handles multi-threading and interacts with Atlas.
+
 #chmod +x run.sh
 #./run.sh
 
